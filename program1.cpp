@@ -1,9 +1,9 @@
 /*
-File Name: hello.cpp
+File Name: program1.cpp
 Author: Austin Major
-Student ID: n675q967
-Assignment Number: 1
-Description: Prints "Hello, world"
+ID: n675q967
+Assignment: 1
+Description: Basic Input and Arithmetic Calculator
 Last Changed: August 28, 2017
 */
 
@@ -13,28 +13,38 @@ using namespace std;
 
 int main() {
 	int num1;
-	int operation;
 	int num2;
+  int operation;
 
-	cout << "Enter a number number:";
+  //layout mimics EXACT HW format (with the exception of line 32)
+  //beginning instructions
+  cout << "This program will prompt for two integers and an operation and then display the result of applying the operation to the numbers.\n\n";
+  //first input
+	cout << "Enter the first integer: ";
 	cin >> num1;
-
-	cout << "Enter a operator: 1)Addition 2)Subtraction 3)Multiplication 4)Division:";
-	cin >> operation;
-
-	cout << "Enter another number:";
+  //second input
+	cout << "Enter the second integer: ";
 	cin >> num2;
+  //operation input
+  cout << "\nThe available operations are:\n\t1. addition\n\t2. subtraction\n\t3. multiplication\n\t4. division\nEnter the number for your choice of operation: ";
+  cin >> operation;
+  //prints to avoid repetition below
+  cout << "\nThe answer is: ";
 
-//scenarios for entered operation: 1-4 
+//scenarios for entered operations and prints to screen
 if (operation == 1) {
-	cout << "The answer is: " << num1 + num2 << endl;
+	cout << num1 << " + " << num2 << " = " << num1 + num2 << endl;
 } else if (operation == 2) {
-	cout << "The answer is: " << num1 - num2 << endl;
+	cout << num1 << " - " << num2 << " = " << num1 - num2 << endl;
 } else if (operation == 3) {
-	cout << "The answer is: " << num1 * num2 << endl;
+	cout << num1 << " * " << num2 << " = " << num1 * num2 << endl;
 } else if (operation == 4) {
-	cout << "The answer is: " << num1 / num2 << endl;
+    //checks for division error by 0
+    if (num2 == 0) {
+  	cout << num1 << " / " << num2 << " cannot be found because can’t divide by zero." << endl;
+  } else
+	  cout << num1 << " / " << num2 << " = " << num1 / num2 << endl;
 } else
-	cout << "Error, please choose another operation" << endl;
+	cout << operation <<" is an invalid operation. Valid choices were 1, 2, 3 or 4. Quitting program." << endl;
 	return 0;
 }
