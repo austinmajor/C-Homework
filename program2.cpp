@@ -1,5 +1,5 @@
 /*
-File Name: hello.cpp
+File Name: program2.cpp
 Name: Austin Major
 WSUID: n675q967
 HW#: 1

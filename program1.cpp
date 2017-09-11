@@ -1,10 +1,9 @@
 /*
 File Name: program1.cpp
-Author: Austin Major
-ID: n675q967
-Assignment: 1
+Name: Austin Major
+WSUID: n675q967
+HW#: 1
 Description: Basic Input and Arithmetic Calculator
-Last Changed: August 28, 2017
 */
 
 # include <iostream>
