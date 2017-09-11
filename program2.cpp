@@ -11,13 +11,16 @@ Description: Prints "For shapes"
 
 using namespace std;
 
-int main() {
-	for (int j = 1; j <= 5; j++) {
-		for (int i = 1; i <= (6 - j); i++) {
-			cout << "#";
-		}
-		cout << "/n";
-	}
+int main(void)
+{
+  for (int i = -3; i <= 3; i++){
+    for (int j = 1; j <= 4 - abs(i); j++) {
+      cout << "#";
+    }
+    cout << "\n";
+  }
 
-	return 0;
+
+
+  return 0;
 }
