@@ -1,10 +1,9 @@
 /*
 File Name: hello.cpp
-Author: Austin Major
-Student ID: n675q967
-Assignment Number: 1
+Name: Austin Major
+WSUID: n675q967
+HW#: 1
 Description: Prints "For shapes"
-Last Changed: August 28, 2017
 */
 
 # include <iostream>

@@ -12,9 +12,7 @@ Last Changed: August 28, 2017
 using namespace std;
 
 int main() {
-	int num1;
-	int num2;
-  int operation;
+	int num1, num2, operation;
 
   //layout mimics EXACT HW format (with the exception of line 32)
   //beginning instructions
