@@ -40,7 +40,6 @@ int main() {
   cout << "\n\n";
   //END OF DIAMOND
   //X
-  int X;
   for (int row = 1; row <= 7; row++) {
     for (int c = 1; c <= 7; c++) {
       if (row == c || (row + c) == (7 + 1))
