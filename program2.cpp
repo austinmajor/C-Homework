@@ -22,33 +22,40 @@ int main() {
     }
     cout << "\n";
   }
-  cout << "\n\n";
   //END OF TRIANGLE
+
+  cout << "\n\n";
+
   //DIAMOND
   int diamond;
   for (int line = 0; line < 7; line++) {
     for (int spaces = abs(line - 3); spaces > 0; spaces--) {
       cout << " ";
     }
+
     if (line > 3) diamond = 2 + (abs(line - 6) * 2);
     else diamond = 2 + (line * 2);
+
     for (int hashes = diamond; hashes > 0; hashes--) {
       cout << "#";
     }
     cout << "\n";
   }
-  cout << "\n\n";
   //END OF DIAMOND
+
+  cout << "\n\n";
+
   //X
   for (int row = 1; row <= 7; row++) {
-    for (int hashes = 1; hashes <= 7; hashes++) {
-      if (row == hashes || (row + hashes) == (7 + 1))
-        cout << "#";
+    for (int c = 1; c <= 7; c++) {
+      if (row == c || (row + c) == (7 + 1))cout << "#";
       else cout << " ";
     }
     cout << "\n";
   }
-  cout << "\n\n";
   //END OF X
+
+  cout << "\n\n";
+
   return 0;
 }
