@@ -47,8 +47,8 @@ int main() {
 
   //X
   for (int row = 1; row <= 7; row++) {
-    for (int c = 1; c <= 7; c++) {
-      if (row == c || (row + c) == (7 + 1))cout << "#";
+    for (int hashes = 1; hashes <= 7; hashes++) {
+      if (row == hashes || (row + hashes) == (7 + 1))cout << "#";
       else cout << " ";
     }
     cout << "\n";
