@@ -46,9 +46,9 @@ int main() {
   cout << "\n\n";
 
   //X
-  for (int row = 1; row <= 7; row++) {
+  for (int line = 1; line <= 7; line++) {
     for (int hashes = 1; hashes <= 7; hashes++) {
-      if (row == hashes || (row + hashes) == (7 + 1))cout << "#";
+      if (line == hashes || (line + hashes) == (7 + 1))cout << "#";
       else cout << " ";
     }
     cout << "\n";
