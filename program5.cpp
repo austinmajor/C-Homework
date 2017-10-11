@@ -1,9 +1,9 @@
 /*
- * Filename: program5.cpp
- * Name: Austin Major
- * WSUID: N675Q967
- * HW#: 5
- * Description: A program that prints the lyrics to the song B-I-N-G-O.
+Filename: program5.cpp
+Name: Austin Major
+WSUID: N675Q967
+HW#: 5
+Description: A program that prints the lyrics to the song B-I-N-G-O.
  */
 
 #include <iostream>
@@ -16,13 +16,13 @@ const int SIZE = 5;
 const char dog[SIZE] = {'B', 'I', 'N', 'G', 'O'};
 
 int main() {
-	//Loop for main 6 verse blocks
+	//Loop 6 blocks
 	for(int i = 0; i <= SIZE; i++) {
 		cout << "There was a farmer had a dog\nand ";
 		printArray(dog);
 		cout << "was his name-o\n";
 
-		//Loop for the 3 occurences of B-I-N-G-O per verse
+		//Loop 3 occurences of B-I-N-G-O per verse
 		for(int count = 0; count < 3; count++) {
 			for(int star = 0; star < i; star++) {
 				cout << "* ";
@@ -41,7 +41,7 @@ int main() {
 	return 0;
 }
 
-//Function to print array
+//Print array
 void printArray(const char *arr) {
 	for(unsigned int i = 0; i <= (sizeof(arr)/sizeof(*arr)); i++) {
 		cout << arr[i] << " ";
