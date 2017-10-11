@@ -3,7 +3,7 @@ Filename: program5.cpp
 Name: Austin Major
 WSUID: N675Q967
 HW#: 5
-Description: A program that prints the lyrics to the song B-I-N-G-O.
+Description: Lyrics to the song B-I-N-G-O.
  */
 
 #include <iostream>
