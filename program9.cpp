@@ -24,7 +24,7 @@ int main() {
 	double in, max, min, mean;
 	int day = 0, hour = 0;
 
-	data.open("temperature.dat", ios::in);
+	data.open("temperature9.dat", ios::in);
 	if (data.is_open()) {
 		while(data >> in) {
 			if(hour == 24) {

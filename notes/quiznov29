@@ -1,0 +1,19 @@
+look through powerpoints
+
+file io
+
+pointers - variable with value of memory address, * dereference
+
+string manip
+
+stream manip - show, fixed, precision
+
+straight off slides
+
+fstream - to open or close
+
+if you open file make sure its and open
+
+if you close a file make sure its closed
+
+dynamic memory
