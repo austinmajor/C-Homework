@@ -1,0 +1,9 @@
+Do assignment 2, except do it as a bash script. The name of your file will be shapes.sh
+
+
+This means that instead of being restricted to 3 specific cout statements, you are restricted to 3 specific echo statements.
+
+Here is a link to get started: https://ryanstutorials.net/bash-scripting-tutorial/
+
+
+So submit the homework, use the command ~cs211a/bin/handin bash shapes.sh
