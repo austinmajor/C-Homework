@@ -1,4 +1,4 @@
-CS211 with Adam Sweeny
+#CS211 with Adam Sweeny
 
 Lecture on __MW__ at __9:30am - 10:45am__ 
 
