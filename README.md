@@ -1,2 +1,3 @@
 # CS211
-C++ Class Files
+C++ 11
+\nAdam Sweeney
