@@ -18,18 +18,18 @@ int main() {
 
   std::cout << "Ticket Number: ";
   std::cin >> stringInput;
-  myTicket.ticketNumber(stringInput);
+  myTicket.setTicketNumber(stringInput);
   std::cout << "Gross Weight (lbs): ";
   std::cin >> doubleInput;
-  myTicket.grossWeight(doubleInput);
+  myTicket.setGrossWeight(doubleInput);
   std::cout << "Tare Weight (lbs): ";
   std::cin >> doubleInput;
-  myTicket.tareWeight(doubleInput);
+  myTicket.setTareWeight(doubleInput);
   std::cout << "Moisture Level (%): ";
   std::cin >> doubleInput;
-  myTicket.moistureLevel(doubleInput);
+  myTicket.setMoistureLevel(doubleInput);
   std::cout << "Foreign Material (%): ";
-  myTicket.foreignMaterial(doubleInput);
+  myTicket.setForeignMaterial(doubleInput);
 
   std::cout << myTicket.getTicketNumber() << ":" << std::endl;
   std::cout << std::setw(4) << myTicket.getGrossWeight() << std::setw(2) << "Gross Weight" << std::endl;
