@@ -29,6 +29,7 @@ int main() {
   std::cin >> doubleInput;
   myTicket.setMoistureLevel(doubleInput);
   std::cout << "Foreign Material (%): ";
+  std::cin >> doubleInput;
   myTicket.setForeignMaterial(doubleInput);
 
   std::cout << myTicket.getTicketNumber() << ":" << std::endl;
