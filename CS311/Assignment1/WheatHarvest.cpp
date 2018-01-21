@@ -33,7 +33,7 @@ int main() {
   myTicket.setForeignMaterial(doubleInput);
 
   std::cout << "Ticket " << myTicket.getTicketNumber() << ":" << std::endl;
-  std::cout << std::setw(4) << myTicket.getGrossWeight() << std::setw(4) << "Gross Weight" << std::endl;
+  std::cout << std::setw(10) << myTicket.getGrossWeight() << std::setw(4) << "Gross Weight" << std::endl;
   std::cout << std::setw(4) << myTicket.getTareWeight() << std::setw(2) << "Tare Weight" << std::endl;
   
   std::cout << std::setw(4) << myTicket.calculateNetWeight() << std::setw(2) << "Net Weight" << std::endl;
