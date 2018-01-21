@@ -33,13 +33,13 @@ int main() {
   myTicket.setForeignMaterial(doubleInput);
 
   std::cout << "Ticket " << myTicket.getTicketNumber() << ":" << std::endl;
-  std::cout << std::setw(10) << myTicket.getGrossWeight() << std::setw(6) << "Gross Weight" << std::endl;
-  std::cout << std::setw(10) << myTicket.getTareWeight() << std::setw(6) << "Tare Weight" << std::endl;
-  std::cout << std::setw(10) << myTicket.calculateNetWeight() << std::setw(6) << "Net Weight" << std::endl << std::endl;
-  std::cout << std::setw(10) << myTicket.calculateGrossBushels() << std::setw(6) << "Gross Bushels" << std::endl;
-  std::cout << std::setw(10) << myTicket.calculateMoistureDockage() << std::setw(6) << "Moisture Level (14%)" << std::endl;
-  std::cout << std::setw(10) << myTicket.calculateForeignMaterialDockage() << std::setw(6) << "Foreign Material (0.75%)" << std::endl;
-  std::cout << std::setw(10) << myTicket.calculateNetBushels() << std::setw(6) << "Net Bushels" << std::endl;
+  std::cout << std::setw(10) << myTicket.getGrossWeight() << "  Gross Weight" << std::endl;
+  std::cout << std::setw(10) << myTicket.getTareWeight() << "  Tare Weight" << std::endl;
+  std::cout << std::setw(10) << myTicket.calculateNetWeight() << "  Net Weight" << std::endl << std::endl;
+  std::cout << std::setw(10) << myTicket.calculateGrossBushels() << "  Gross Bushels" << std::endl;
+  std::cout << std::setw(10) << myTicket.calculateMoistureDockage() << "  Moisture Level (14%)" << std::endl;
+  std::cout << std::setw(10) << myTicket.calculateForeignMaterialDockage() << "  Foreign Material (0.75%)" << std::endl;
+  std::cout << std::setw(10) << myTicket.calculateNetBushels() << "  Net Bushels" << std::endl;
 
   return 0;
 }
