@@ -3,7 +3,6 @@
 #include <string>
 
 class Ticket{
-  //need to fix private/public
   public:
   //setters
   void setTicketNumber(std::string input);

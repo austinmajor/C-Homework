@@ -11,19 +11,15 @@ const int STD_MOISTURE_LEVEL = 12;
 void Ticket::setTicketNumber(std::string input){
   this->ticketNumber = input;
 }
-
 void Ticket::setGrossWeight(double input){
   this->grossWeight = input;
 }
-
 void Ticket::setTareWeight(double input){
   this->tareWeight = input;
 }
-
 void Ticket::setMoistureLevel(double input){
   this->moistureLevel = input;
 }
-
 void Ticket::setForeignMaterial(double input){
   this->foreignMaterial = input;
 }
