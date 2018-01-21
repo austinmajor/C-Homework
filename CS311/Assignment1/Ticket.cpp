@@ -1,3 +1,10 @@
+/*
+File Name: WheatHarvest.cpp
+Author: Austin Major
+Student ID: N675Q967
+Assignment Number: 1
+*/
+
 //Function Definitions
 #include <iostream>
 #include <string>

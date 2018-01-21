@@ -1,3 +1,10 @@
+/*
+File Name: WheatHarvest.cpp
+Author: Austin Major
+Student ID: N675Q967
+Assignment Number: 1
+*/
+
 //This is where Function Declarations go
 #include <iostream>
 #include <string>
