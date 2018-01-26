@@ -1,5 +1,5 @@
 /*
-File Name: WheatHarvest.cpp
+File Name: Ticket.cpp
 Author: Austin Major
 Student ID: N675Q967
 Assignment Number: 1
@@ -33,19 +33,19 @@ void Ticket::setForeignMaterial(double input){
 //end of setters
 
 //start of getters
-std::string Ticket::getTicketNumber(){
+const std::string Ticket::getTicketNumber(){
   return this->ticketNumber;
 }
-double Ticket::getGrossWeight(){
+const double Ticket::getGrossWeight(){
   return this->grossWeight;
 }
-double Ticket::getTareWeight(){
+const double Ticket::getTareWeight(){
   return this->tareWeight;
 }
-double Ticket::getMoistureLevel(){
+const double Ticket::getMoistureLevel(){
   return this->moistureLevel;
 }
-double Ticket::getForeignMaterial(){
+const double Ticket::getForeignMaterial(){
   return this->foreignMaterial;
 }
 //end of getters

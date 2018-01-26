@@ -1,5 +1,5 @@
 /*
-File Name: WheatHarvest.cpp
+File Name: Ticket.h
 Author: Austin Major
 Student ID: N675Q967
 Assignment Number: 1
@@ -19,11 +19,11 @@ class Ticket{
   void setForeignMaterial(double input);
 
   //getters
-  std::string getTicketNumber();
-  double getGrossWeight();
-  double getTareWeight();
-  double getMoistureLevel();
-  double getForeignMaterial();
+  const std::string getTicketNumber();
+  const double getGrossWeight();
+  const double getTareWeight();
+  const double getMoistureLevel();
+  const double getForeignMaterial();
 
   //calculation
   double calculateNetWeight();
