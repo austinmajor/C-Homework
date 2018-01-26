@@ -19,11 +19,11 @@ class Ticket{
   void setForeignMaterial(double input);
 
   //getters
-  const std::string getTicketNumber();
-  const double getGrossWeight();
-  const double getTareWeight();
-  const double getMoistureLevel();
-  const double getForeignMaterial();
+  std::string getTicketNumber() const;
+  double getGrossWeight() const;
+  double getTareWeight() const;
+  double getMoistureLevel() const;
+  double getForeignMaterial() const;
 
   //calculation
   double calculateNetWeight();

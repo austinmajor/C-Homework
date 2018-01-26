@@ -33,19 +33,19 @@ void Ticket::setForeignMaterial(double input){
 //end of setters
 
 //start of getters
-const std::string Ticket::getTicketNumber(){
+std::string Ticket::getTicketNumber() const {
   return this->ticketNumber;
 }
-const double Ticket::getGrossWeight(){
+double Ticket::getGrossWeight() const {
   return this->grossWeight;
 }
-const double Ticket::getTareWeight(){
+double Ticket::getTareWeight() const {
   return this->tareWeight;
 }
-const double Ticket::getMoistureLevel(){
+double Ticket::getMoistureLevel() const {
   return this->moistureLevel;
 }
-const double Ticket::getForeignMaterial(){
+double Ticket::getForeignMaterial() const {
   return this->foreignMaterial;
 }
 //end of getters
