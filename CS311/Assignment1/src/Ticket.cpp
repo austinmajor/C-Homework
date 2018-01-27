@@ -15,19 +15,19 @@ const int AVG_TEST_WEIGHT = 60;
 const int STD_MOISTURE_LEVEL = 12;
 
 //start of setters
-void Ticket::setTicketNumber(std::string input){
+void Ticket::setTicketNumber(std::string input) {
   this->ticketNumber = input;
 }
-void Ticket::setGrossWeight(double input){
+void Ticket::setGrossWeight(double input) {
   this->grossWeight = input;
 }
-void Ticket::setTareWeight(double input){
+void Ticket::setTareWeight(double input) {
   this->tareWeight = input;
 }
-void Ticket::setMoistureLevel(double input){
+void Ticket::setMoistureLevel(double input) {
   this->moistureLevel = input;
 }
-void Ticket::setForeignMaterial(double input){
+void Ticket::setForeignMaterial(double input) {
   this->foreignMaterial = input;
 }
 //end of setters
@@ -50,22 +50,22 @@ double Ticket::getForeignMaterial() const {
 }
 //end of getters
 
-//start of caluclation
-double Ticket::calculateNetWeight(){
+//start of calculation
+double Ticket::calculateNetWeight() {
   return this->grossWeight - this->tareWeight;
 }
-double Ticket::calculateGrossBushels(){
+double Ticket::calculateGrossBushels() {
   return this->calculateNetWeight() / AVG_TEST_WEIGHT;
 }
-double Ticket::calculateMoistureDockage(){
+double Ticket::calculateMoistureDockage() {
   if (moistureLevel <= STD_MOISTURE_LEVEL) {
     return 0;
   } return this->calculateGrossBushels() * ((moistureLevel - STD_MOISTURE_LEVEL) / 100);
 }
-double Ticket::calculateForeignMaterialDockage(){
+double Ticket::calculateForeignMaterialDockage() {
   return this->calculateGrossBushels() * (this->foreignMaterial / 100);
 }
-double Ticket::calculateNetBushels(){
+double Ticket::calculateNetBushels() {
   return this->calculateGrossBushels() - this->calculateForeignMaterialDockage() - calculateMoistureDockage();
 }
 //end of calculation
