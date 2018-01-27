@@ -2,23 +2,17 @@
 File Name: Ticket.h
 Author: Austin Major
 Student ID: N675Q967
-Assignment Number: 1
+Assignment Number: 2
 */
 
-//This is where Function Declarations go
+//Function Declarations
 #include <iostream>
 #include <string>
 
-class Ticket{
-  public:
-
- Ticket(std::string ticketNumber, double grossWeight, double tareWeight, double moistureLevel, double foreignMaterial);
+class Ticket {
+public:
   //setters
-//  void setTicketNumber(std::string input);
-//  void setGrossWeight(double input);
-//  void setTareWeight(double input);
-//  void setMoistureLevel(double input);
-//  void setForeignMaterial(double input);
+  Ticket(std::string ticketNumber, double grossWeight, double tareWeight, double moistureLevel, double foreignMaterial);
 
   //getters
   std::string getTicketNumber() const;
@@ -34,7 +28,7 @@ class Ticket{
   double calculateForeignMaterialDockage();
   double calculateNetBushels();
 
-  private:
+private:
   std::string ticketNumber;
   double grossWeight, tareWeight, moistureLevel, foreignMaterial;
 };
