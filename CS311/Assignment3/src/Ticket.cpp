@@ -19,12 +19,12 @@ namespace {
 //constructor
 Ticket::Ticket(std::string ticketNumber, double grossWeight, double tareWeight, double moistureLevel, double foreignMaterial) : ticketNumber(ticketNumber), grossWeight(grossWeight), tareWeight(tareWeight), moistureLevel(moistureLevel), foreignMaterial(foreignMaterial) {}
 
-//member function to overload the equality operator
+//function to overload the equality operator
 bool Ticket::operator==(const Ticket compareTicket) {
   return (this->ticketNumber == compareTicket.ticketNumber);
 }
 
-//member function to format and return the ticket receipt as a string
+//function to format and return the ticket receipt as a string
 std::string Ticket::toString() const {
 	std::stringstream ss;
 
