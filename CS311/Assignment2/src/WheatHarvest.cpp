@@ -16,8 +16,9 @@ Assignment Number: 2
 
 int main()
 {
-	double inputGrossWeight, inputTareWeight, inputMoistureLevel, inputForiegnMaterial, netBushels, grossBushels;
+	double inputGrossWeight, inputTareWeight, inputMoistureLevel, inputForiegnMaterial;
 	std::vector<Ticket> tickets;
+	double netBushels = 0, grossBushels = 0;
 
 	while (true)
 	{
@@ -63,7 +64,7 @@ int main()
 		std::cout << "\t" << tickets[i].calculateNetWeight() << " Net Weight" << std::endl << std::endl;
 		std::cout << "\t" << tickets[i].calculateGrossBushels() << " Gross Bushels" << std::endl;
 		std::cout << "\t" << tickets[i].calculateMoistureDockage() << " Moisture Level (" << tickets[i].getMoistureLevel() << "%)" << std::endl;
-		std::cout << "\t" << tickets[i].calculateForeignMaterialDockage() << " Foriegn Material (" << tickets[i].calculateForeignMaterialDockage() << "%)" << std::endl;
+		std::cout << "\t" << tickets[i].calculateForeignMaterialDockage() << " Foriegn Material (" << tickets[i].getForeignMaterial() << "%)" << std::endl;
 		std::cout << "\t" << tickets[i].calculateNetBushels() << " Net Bushels" << std::endl << std::endl;
 	}
 	
