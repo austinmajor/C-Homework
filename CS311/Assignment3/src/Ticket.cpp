@@ -12,13 +12,12 @@ Assignment Number: 3
 
 //unnamed namespace to encapsulate const within ticket.cpp
 namespace {
-  const int AVG_TEST_WEIGHT = 60;
-  const int STD_MOISTURE_LEVEL = 12;
+  const double AVG_TEST_WEIGHT = 60;
+  const double STD_MOISTURE_LEVEL = 12;
 }
 
 //constructor
-Ticket::Ticket(std::string ticketNumber, double grossWeight, double tareWeight, double moistureLevel, double foreignMaterial) : ticketNumber(ticketNumber), grossWeight(grossWeight), tareWeight(tareWeight), moistureLevel(moistureLevel), foreignMaterial(foreignMaterial) {
-}
+Ticket::Ticket(std::string ticketNumber, double grossWeight, double tareWeight, double moistureLevel, double foreignMaterial) : ticketNumber(ticketNumber), grossWeight(grossWeight), tareWeight(tareWeight), moistureLevel(moistureLevel), foreignMaterial(foreignMaterial) {}
 
 //member function to overload the equality operator
 bool Ticket::operator==(const Ticket compareTicket) {

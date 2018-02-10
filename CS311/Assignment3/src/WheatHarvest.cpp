@@ -20,8 +20,7 @@ int main()
 
 	while (true) {
 		//Flush cin buffer if not first entry
-		if (tickets.size() > 0)
-		{
+		if (tickets.size() > 0) {
 			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 		}
 
@@ -30,14 +29,25 @@ int main()
 		std::cout << "Ticket Number " << tickets.size() + 1 <<  " (alphanumeric): ";
 		std::getline(std::cin, ticketNumber);
 
-		if (ticketNumber == "")
-		{
+		if (ticketNumber == "") {
 			break;
 		}
 
-		Ticket myTicket(ticketNumber, inputGrossWeight = 0, inputTareWeight = 0, inputMoistureLevel = 0, inputForeignMaterial = 0);
+		std::cout << "Gross weight (lbs): ";
+		std::cin >> inputGrossWeight;
 
-		//compares tickets and returns error if duplicate
+		std::cout << "Tare weight (lbs): ";
+		std::cin >> inputTareWeight;
+
+		std::cout << "Moisture level (%): ";
+		std::cin >> inputMoistureLevel;
+
+		std::cout << "Foreign material (%): ";
+		std::cin >> inputForeignMaterial;
+
+		Ticket myTicket(ticketNumber, inputGrossWeight, inputTareWeight, inputMoistureLevel, inputForeignMaterial);
+
+		//compares tickets via for loop and returns error if duplicate
 		if (tickets.size() > 0) {
 			duplicate = false;
 			for (unsigned int i = 0; i < tickets.size(); i++) {
