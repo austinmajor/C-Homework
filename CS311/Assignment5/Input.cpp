@@ -2,7 +2,7 @@
 File Name: Input.cpp
 Author: Austin Major
 Student ID: N675Q967
-Assignment Number: 4
+Assignment Number: 5
 */
 
 #include <iostream>
@@ -10,14 +10,14 @@ Assignment Number: 4
 
 #include "Input.h"
 
-//enumerated type for the type
+//Enumerated type for the type of grain
 enum Type {
 	WHEAT = 'w',
 	MILO = 'g',
 	SOYBEAN = 's'
 };
 
-//encapsulates the input of tickets
+//Function inputTickets encapsulates the input of tickets
 void Input::inputTickets(Tickets& tickets) {
 	while(true) {
 		if(tickets.size() > 0) {
