@@ -28,12 +28,12 @@ std::time_t Ticket::getTimestamp() const {
 
 //Function getForeignMaterial returns the foreign material percentage attached to the grain member variable
 double Ticket::getForeignMaterial() const {
-   return this->sample.getForeignMaterial();
+   return this->sample->getForeignMaterial();
 }
 
 //Function getMoistureLevel returns the moisture level percentage attached to the grain member variable
 double Ticket::getMoistureLevel() const {
-   return this->sample.getMoistureLevel();
+   return this->sample->getMoistureLevel();
 }
 
 //Function Ticket is the constructor for the class Ticket
@@ -45,7 +45,7 @@ Ticket::Ticket(const std::string& number, const int grossWeight, const int tareW
 
 //Ticket copy constructor allows a new instance of the class to be initailized with another ticket class as a parameter.
 Ticket::Ticket(const Ticket& ticket) {
-	if(ticket->sample == nullptr) {
+	if(ticket.sample == nullptr) {
 		this->sample == nullptr;
 	} else {
 		this->sample = ticket.sample->clone();
@@ -65,7 +65,7 @@ const Ticket& Ticket::operator =(const Ticket& ticket) {
 
 	delete this->sample;
 
-	if(ticket->sample == nullptr) {
+	if(ticket.sample == nullptr) {
 		this->sample = nullptr;
 	} else {
 		this->sample = ticket.sample->clone();
@@ -75,13 +75,13 @@ const Ticket& Ticket::operator =(const Ticket& ticket) {
 	this->grossWeight = ticket.grossWeight;
 	this->tareWeight = ticket.tareWeight;
 	this->number = ticket.number;
+
+	return *this;
 }
 
 //Ticket class deconstructor to delete values in free memory
 Ticket::~Ticket() {
-	if(this->sample != nullptr) {
-		delete this->sample;
-	}
+	delete this->sample;
 }
 
 //Function getSample returns a copy of the sample value
@@ -144,16 +144,16 @@ int Ticket::calculateNetWeight() const {
 
 //Function calculateGrossBushels returns the amount of bushels before subtracting dockage
 double Ticket::calculateGrossBushels() const {
-	return (this->calculateNetWeight() / this->sample.getAverageTestWeight());
+	return (this->calculateNetWeight() / this->sample->getAverageTestWeight());
 }
 
 //Function calculateMoistureDockage returns the dockage amount due to moisture levels in the intake, if the moisture level percentage given was above 12%, exclusive
 double Ticket::calculateMoistureDockage() const {
-	if(this->getMoistureLevel() <= this->sample.getIdealMoistureLevel()) {
+	if(this->getMoistureLevel() <= this->sample->getIdealMoistureLevel()) {
 		return 0;
 	}
 
-	return (this->calculateGrossBushels() * ((this->getMoistureLevel() - this->sample.getIdealMoistureLevel())/100));
+	return (this->calculateGrossBushels() * ((this->getMoistureLevel() - this->sample->getIdealMoistureLevel())/100));
 }
 
 //Function calculateForeignMaterialDockage returns the dockage amount due to foriegn material within the intake

@@ -21,9 +21,8 @@ Milo::Milo(double moistureLevel, double foreignMaterial) : Grain(moistureLevel, 
 {}
 
 //Function clone returns a copy of pointer to the calling object
-&Milo Milo::clone() const {
-	that = &this;
-	return *that;
+Milo* Milo::clone() const {
+	return new Milo(*this);
 }
 
 //Function getType gets the string representation of the calling object's class name

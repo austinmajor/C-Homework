@@ -9,6 +9,9 @@ Assignment Number: 5
 #include <string>
 
 #include "Input.h"
+#include "Wheat.h"
+#include "Milo.h"
+#include "Soybeans.h"
 
 //Enumerated type for the type of grain
 enum Type {
@@ -51,17 +54,30 @@ void Input::inputTickets(Tickets& tickets) {
 		Ticket proposedTicket;
 		switch(grainType) {
 			case WHEAT:
-				proposedTicket = Ticket(number, inputGrossWeight, inputTareWeight, new Wheat(inputMoistureLevel, inputForeignMaterial));
+				{
+					Grain *w = new Wheat(inputMoistureLevel, inputForeignMaterial);
+					proposedTicket = Ticket(number, inputGrossWeight, inputTareWeight, w);
+				}
 				break;
 			case MILO:
-				proposedTicket = Ticket(number, inputGrossWeight, inputTareWeight, new Milo(inputMoistureLevel, inputForeignMaterial));
+				{
+					Grain *m = new Milo(inputMoistureLevel, inputForeignMaterial);
+					proposedTicket = Ticket(number, inputGrossWeight, inputTareWeight, m);
+				}
 				break;
 			case SOYBEAN:
-				proposedTicket = Ticket(number, inputGrossWeight, inputTareWeight, new Soybean(inputMoistureLevel, inputForeignMaterial));
+				{
+					Grain *s = new Soybeans(inputMoistureLevel, inputForeignMaterial);
+					proposedTicket = Ticket(number, inputGrossWeight, inputTareWeight, s);
+				}
 				break;
 			default:
-				proposedTicket = Ticket(number, inputGrossWeight, inputTareWeight, new Wheat(inputMoistureLevel, inputForeignMaterial));
-		}
+				{
+					Grain *w = new Wheat(inputMoistureLevel, inputForeignMaterial);
+					proposedTicket = Ticket(number, inputGrossWeight, inputTareWeight, w);
+				}
+				break;		
+			}
 
 		if (tickets.size() > 0) {
 			bool duplicate = false;

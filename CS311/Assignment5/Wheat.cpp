@@ -21,9 +21,8 @@ Wheat::Wheat(double moistureLevel, double foreignMaterial) : Grain(moistureLevel
 {}
 
 //Function clone returns a copy of pointer to the calling object
-&Wheat Wheat::clone() const {
-   that = &this;
-	return *that;
+Wheat* Wheat::clone() const {
+  return new Wheat (*this);
 }
 
 //Function getType gets the string representation of the calling object's class name

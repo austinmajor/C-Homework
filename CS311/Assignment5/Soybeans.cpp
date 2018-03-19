@@ -21,9 +21,8 @@ Soybeans::Soybeans(double moistureLevel, double foreignMaterial) : Grain(moistur
 {}
 
 //Function clone returns a copy of pointer to the calling object
-&Soybeans Soybeans::clone() const {
-	that = &this;
-	return *that;
+Soybeans* Soybeans::clone() const {
+	return new Soybeans(*this);
 }
 
 //Function getType gets the string representation of the calling object's class name
